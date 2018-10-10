@@ -1,7 +1,7 @@
 {
   "name": "jisho-san",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "inject.js",
   "author": "David Sharp <davidsharp@charanga.com>",
   "license": "MIT"
 }

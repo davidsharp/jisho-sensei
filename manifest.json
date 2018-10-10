@@ -5,9 +5,6 @@
   "description": "This extension reads Japanese text on Jisho.org",
   "version": "0.0.0",
 
-  "browser_action": {
-    "default_icon": "icon.png"
-  },
   "content_scripts":[{
     "matches":["http://*/*","https://*/*"],
     "js":["inject.js"]
