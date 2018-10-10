@@ -5,14 +5,26 @@ if(/jisho\.org/gi.test(location.hostname)){
   //japanese.forEach(c=>console.log(c.innerText))
   //var noFurigana = japanese.map(c=>c.querySelectorAll(':not(.furigana)'))
   var noFurigana = []
-  japanese.forEach(c=>noFurigana.push(c.querySelectorAll(':not(.furigana)')))
-  noFurigana.forEach(c=>c.forEach(_c=>{
+  //japanese.forEach(c=>noFurigana.push(c.querySelectorAll(':not(.furigana)')))
+  /*noFurigana.forEach(c=>c.forEach(_c=>{
     var speaker = document.createElement('div')
     speaker.onclick=function(){yonde(_c.innerText)}
     speaker.innerText="🗣"
     _c.appendChild(speaker)
     console.log(_c)
-  }))
+  }))*/
+  japanese.forEach(c=>noFurigana.push(c))
+  noFurigana.forEach(c=>{
+      var phraseArray=[]
+      var elems = c.querySelectorAll(':not(.furigana)')
+      elems.forEach(_c=>{phraseArray.push(_c.innerText)})
+      var phrase = phraseArray.join('')
+      var speaker = document.createElement('div')
+      speaker.onclick=function(){yonde(phrase)}
+      speaker.innerText="🗣"
+      c.appendChild(speaker)
+      //console.log(c)
+  })
 }
 
 speechSynthesis.getVoices()
