@@ -16,8 +16,15 @@ if(/jisho\.org/gi.test(location.hostname)){
   japanese.forEach(c=>noFurigana.push(c))
   noFurigana.forEach(c=>{
       var phraseArray=[]
-      var elems = c.querySelectorAll(':not(.furigana)')
-      elems.forEach(_c=>{phraseArray.push(_c.innerText)})
+      //var phraseArrayPoker=[]
+      var elems = [c]//c.querySelectorAll(':not(.furigana)')
+      elems.forEach(_c=>{
+        phraseArray.push(_c.innerText)
+        //phraseArrayPoker.push({innerText:_c.innerText,elem:_c})
+      })
+
+    //console.log(phraseArrayPoker)
+
       var phrase = phraseArray.join('')
       var speaker = document.createElement('div')
       speaker.onclick=function(){yonde(phrase)}
