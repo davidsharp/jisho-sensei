@@ -1,4 +1,4 @@
-# jisho-san, yonde(hanashite) kudasai!
+# jisho-sensei, yonde(hanashite) kudasai!
 
 This is a WIP Chrome extension that reads some Japanese from jisho.org
 

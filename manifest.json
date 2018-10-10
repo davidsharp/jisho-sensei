@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "Jisho-san",
+  "name": "jisho-sensei",
   "description": "This extension reads Japanese text on Jisho.org",
   "version": "0.0.0",
 
